@@ -3,7 +3,7 @@ import MockAdapter from 'axios-mock-adapter';
 
 import { GET_ROUTE_RESULTS, POST_ROUTE_AUTH } from '../config';
 import { HttpStatus } from '../utils';
-import * as results from './result.worker';
+import * as results from '../workers/result.worker';
 
 describe('ResultWorker', () => {
   let mock: MockAdapter;
