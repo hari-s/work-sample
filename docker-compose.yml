@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  work-sample-db:
+    image: mongo
+    container_name: trot-race-db
+    restart: always
+    ports:
+      - 27121:27017
+    volumes:
+      - /data/db:/data/db
+    command: ['--logpath', '/data/db/log.log']
+  work-sample:
+    env_file: .env
+    environment:
+      SIMULATOR_BASE_URL: $SIMULATOR_BASE_URL
+      SIMULATOR_EMAIL: $SIMULATOR_EMAIL
+      SIMULATOR_PASSWORD: $SIMULATOR_PASSWORD
+      TROT_RACE_MONGODB_URI: mongodb://work-sample-db:27017/trot-race
+    depends_on:
+      - work-sample-db
+    build:
+      context: .
+    command: ['node', 'dist/server.js']

@@ -1,0 +1,46 @@
+{
+  "name": "work-sample",
+  "version": "1.0.0",
+  "main": "dist/server.js",
+  "scripts": {
+    "clean": "rimraf coverage dist",
+    "start": "yarn build && node dist/server.js",
+    "start:dev": "nodemon",
+    "build": "rimraf ./dist && tsc",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:fixdry": "eslint . --fix-dry-run"
+  },
+  "repository": {
+    "url": "https://github.com/hari-s/work-sample",
+    "type": "git"
+  },
+  "author": "Dodiya, Hargovind (hari.s@live.in)",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.1",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "axios-mock-adapter": "^1.20.0",
+    "eslint": "^8.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "jest": "^27.3.1",
+    "mongodb-memory-server": "^7.5.1",
+    "nodemon": "^2.0.13",
+    "prettier": "^2.4.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.0.7",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "axios": "^0.23.0",
+    "dotenv": "^10.0.0",
+    "mongoose": "^6.0.12"
+  }
+}

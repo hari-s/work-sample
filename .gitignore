@@ -1,0 +1,12 @@
+# build output
+dist
+node_modules
+
+# dotenv environment variables file
+.env
+
+# coverate output directory by jest
+coverage
+
+# docker stores here mongodb volume
+data
