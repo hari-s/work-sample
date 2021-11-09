@@ -2,9 +2,6 @@
 dist
 node_modules
 
-# dotenv environment variables file
-.env
-
 # coverate output directory by jest
 coverage
 
